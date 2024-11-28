@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.contenedor {
+    max-width: 1200px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.header { 
+    background-image: 
+        url(../src/images/bg-pattern-intro-mobile.svg),
+        linear-gradient(to bottom, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    background-repeat: no-repeat;
+    background-size:auto;
+    background-position: 40% 40%;
+    border-radius: 0 0 0 90px;
+}
+@media (min-width: 768px) {
+    .header { 
+        background-image: 
+            url(../src/images/bg-pattern-intro-desktop.svg),
+            linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+            background-size: cover;
+    }
+}
+.infraestructura {
+    background-image: 
+        url(../src/images/bg-pattern-circles.svg),
+        linear-gradient(to bottom, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+    background-repeat: no-repeat;
+    background-size: 500px, 100%;
+    background-position: center -1800% ;
+    border-radius: 0 80px 0 80px;
+}
+@media (min-width: 520px) and (max-width:768px) {
+    .infraestructura {
+        background-position: center -100% ;
+    }
+}
+@media (min-width: 768px) {
+    .infraestructura {
+        background-image: 
+        url(../src/images/bg-pattern-circles.svg),
+        linear-gradient(to right, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+        background-size: 500px, 100%;
+        background-position: -30% -1500%;
+    }
+}
+@media (min-width: 1024px) {
+    .infraestructura {
+        background-image: 
+        url(../src/images/bg-pattern-circles.svg),
+        linear-gradient(to right, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+        background-size: 800px, 100%;
+        background-position: 10% 80%;
+    }
+}
+@media (min-width: 523px) and (max-width:768px) {
+    .infraestructura {
+        padding: 300px 0 300px 0;
+    }
+}
+.footer {
+    border-radius: 0 80px 0 0;
+}
+.activo {
+    rotate: 180deg;
+    transition: rotate 0.2s ease;
+}
+.inactivo {
+    transition: rotate 0.2s ease;
+}
+@media (min-width: 768px) {
+    .opcion::before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        background-color: white;
+        bottom: -3px;
+        left: 0;
+        transition: width 0.2s ease-in-out;
+    }
+    .mostrar::before {
+        width: 80%;
+    }
+}
+@media (max-width: 768px) {
+    .btn-singup {
+        background: linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    }
+}
+.enlace::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width .2s ease;
+}
+.enlace:hover::before {
+    width: 100%;
+}

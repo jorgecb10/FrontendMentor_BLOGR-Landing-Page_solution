@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./src/images/favicon-32x32.png">
+  <title>Frontend Mentor | [Blogr]</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="dist/output.css">
+</head>
+<body class="font-ubuntu">
+  <header class="header pt-10 pb-32">
+    <div class="contenedor header__contenido">
+      <div class="header__barra">
+        <div class="header__opciones flex items-center max-[768px]:justify-between gap-20">
+          <img src="src/images/logo.svg" alt="logo Blogr">
+
+          <a id="menu-hamburguesa" class="md:hidden block">
+            <img src="src/images/icon-hamburger.svg" alt="icono menú">
+          </a>
+
+          <nav id="navegacion" class="header__opciones hidden md:block w-full max-md:w-[90%] max-md:absolute max-md:top-[100px] max-md:bg-white max-md:rounded-md max-md:py-7 max-md:shadow-2xl">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+              <div class="max-md:w-full">
+                <ul class="flex flex-col md:flex-row gap-5"> 
+                  <li class="etiqueta-opcion relative max-md:w-[90%] max-md:mx-auto ">
+                    <a class="opcion flex items-center justify-center gap-2 cursor-pointer text-very-dark-blue md:text-white">
+                      Product
+                      <picture>
+                        <source 
+                          media="(min-width: 768px)" 
+                          srcset="src/images/icon-arrow-light.svg" 
+                          type="image/svg+xml">
+                        <img loading="lazy" decoding="async" src="src/images/icon-arrow-dark.svg" alt="icono-arrow" class="icono-menu">
+                      </picture>
+                    </a>
+                    <ul class="submenu max-md:mx-auto max-md:text-center max-md:py-5 max-md:bg-[#F1F1F2] max-md:bg-brightnes max-md:mt-5 md:w-[150px] md:absolute md:left-0 md:mt-2 bg-white text-very-dark-grayish-blue md:text-black md:py-5 md:pl-4 rounded-md hidden">
+                      <li><a href="#" class="block hover:font-bold mb-2">Overview</a></li>
+                      <li><a href="#" class="block hover:font-bold mb-2">Pricing</a></li>
+                      <li><a href="#" class="block hover:font-bold mb-2">Marketplace</a></li>
+                      <li><a href="#" class="block hover:font-bold mb-2">Features</a></li>
+                      <li><a href="#" class="block hover:font-bold">Integrations</a></li>
+                    </ul>
+                  </li>
+    
+                  <li class="etiqueta-opcion relative max-md:w-[90%] max-md:mx-auto">
+                    <a class="opcion flex items-center justify-center gap-2 cursor-pointer text-very-dark-blue md:text-white">
+                      Company
+                      <picture>
+                        <source 
+                          media="(min-width: 768px)" 
+                          srcset="src/images/icon-arrow-light.svg" 
+                          type="image/svg+xml">
+                        <img loading="lazy" decoding="async" src="src/images/icon-arrow-dark.svg" alt="icono-arrow" class="icono-menu">
+                      </picture>
+                    </a>
+                    <ul class="submenu max-md:mx-auto max-md:text-center max-md:py-5 max-md:bg-[#F1F1F2] max-md:mt-5 md:w-[150px] md:absolute md:left-0 md:mt-2 bg-white text-very-dark-grayish-blue md:text-black md:py-5 md:pl-4 rounded-md hidden">
+                      <li><a href="#" class="block hover:font-bold mb-2"">About</a></li>
+                      <li><a href="#" class="block hover:font-bold mb-2"">Team</a></li>
+                      <li><a href="#" class="block hover:font-bold mb-2"">Blog</a></li>
+                      <li><a href="#" class="block hover:font-bold">Careers</a></li>
+                    </ul>
+                  </li>
+    
+                  <li class="etiqueta-opcion relative max-md:w-[90%] max-md:mx-auto">
+                    <a class="opcion flex items-center justify-center gap-2 cursor-pointer text-very-dark-blue md:text-white">
+                      Connect
+                      <picture>
+                        <source 
+                          media="(min-width: 768px)" 
+                          srcset="src/images/icon-arrow-light.svg" 
+                          type="image/svg+xml">
+                        <img loading="lazy" decoding="async" src="src/images/icon-arrow-dark.svg" alt="icono-arrow" class="icono-menu">
+                      </picture>
+                    </a>
+                    <ul class="submenu max-md:mx-auto max-md:text-center max-md:py-5 max-md:bg-[#F1F1F2] max-md:mt-5 md:w-[150px] md:absolute md:left-0 md:mt-2 bg-white text-very-dark-grayish-blue md:text-black md:py-5 md:pl-4 rounded-md hidden">
+                      <li><a href="#" class="block hover:font-bold mb-2">Contact</a></li>
+                      <li><a href="#" class="block hover:font-bold mb-2">Newsletter</a></li>
+                      <li><a href="#" class="block hover:font-bold">LinkedIn</a></li>
+                    </ul>
+                  </li>
+                </ul> 
+              </div>
+  
+              <div class="header__opciones-login max-md:mt-5 flex gap-2 flex-col md:flex-row">
+                <a href="#" class="py-2 px-5 max-md:px-7 text-very-dark-blue md:text-white text-center">Login</a>
+                <a href="#" class="btn-singup py-2 px-5
+                max-md:px-7 md:bg-white md:hover:bg-opacity-30 md:hover:text-white rounded-full md:text-light-red text-white text-center transition-all duration-200">Sign Up</a>
+              </div> <!---->
+            </div>
+          </nav>
+        </div> <!-- .header__opciones -->
+      </div> <!-- header__barra-->
+
+      <div class="header__info mt-24 text-center text-white">
+        <h1 class="header__heading font-overpass text-3xl">A modern publishing platform</h1>
+
+        <p class="header__texto mt-3 mb-7">
+          Grow your audience and build your online brand
+        </p>
+
+        <div class="header__enlaces flex items-center justify-center gap-3">
+          <a href="#" class="border-2 border-white rounded-full py-1 px-3 font-medium tracking-tighter bg-white text-light-red hover:bg-opacity-35 hover:border-opacity-0 hover:text-white transition-all duration-200">Start for Free</a>
+          <a href="#" class="border-2 border-white rounded-full py-1 px-3 font-medium tracking-tighter hover:bg-white hover:text-light-red transition-all duration-200">Learn More</a>
+        </div>
+      </div>
+    </div> <!-- header__contenido -->
+  </header>
+
+  <main class="main my-20 overflow-hidden">
+    <h2 class="main__heading text-center text-xl md:text-2xl text-very-dark-blue md:mb-7 lg:mb-0">Designed for the future</h2>
+
+    <div class="main__grid flex flex-col-reverse md:grid md:grid-cols-2 md:items-center">
+      <div class="main__info mx-auto md:mx-0 w-[90%] 2xl:w-[70%] text-center md:text-left md:justify-self-end">
+        <h3 class="main__heading-info text-xl text-very-dark-blue font-semibold font-overpass mb-3">Introducing an extensible editor</h3>
+        <p class="main__texto text-very-dark-black-blue">
+          Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. 
+          The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, 
+          videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or 
+          change the looks of a blog.
+        </p>
+
+        <h3 class="main__heading-info text-xl text-very-dark-blue font-semibold font-overpass mt-7 mb-3">Robust content management</h3>
+        <p class="main__texto text-very-dark-black-blue">
+          Flexible content management enables users to easily move through posts. Increase the usability of your blog 
+          by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.
+        </p>
+      </div>
+
+      <div class="main__ilustracion my-7 md:my-0">
+        <picture>
+          <source
+            media="(min-width: 768px)"
+            srcset="./src/images/illustration-editor-desktop.svg" 
+            type="image/svg+xml">
+          <img loading="lazy" decoding="async" src="./src/images/illustration-editor-mobile.svg" lazy="imagen" class="mx-auto xl:ml-[250px]">
+        </picture>
+      </div>
+    </div>
+  </main>
+  
+  <section class="infraestructura py-64 lg:py-48 mt-60 md:mt-40 relative flex items-center justify-center">
+    <div class="contenedor md:grid md:grid-cols-2 md:items-center absolute right-0 left-0 top-[-150px] md:top-0 md:bottom-0 lg:top-[-90px]">
+      <div class="infraestructura__imagen">
+        <img src="src/images/illustration-phones.svg" alt="illustration-phones" class="mx-auto">
+      </div>
+
+      <div class="infraestructura__contenido text-center md:text-left">
+        <h2 class="text-2xl text-white font-semibold">State of the Art Infraestructure</h2>
+        <p class="infraestructura__texto text-grayish-hsl mt-3">
+          With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. 
+          This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
+        </p>
+      </div>
+    </div>
+  </section>
+  
+  <section class="caracteristicas my-20 md:grid md:grid-cols-2 md:items-center">
+    <div class="caracteristicas__imagen">
+      <picture>
+        <source
+          media="(min-width: 768px)"
+          srcset="./src/images/illustration-laptop-desktop.svg" 
+          type="image/svg+xml">
+        <img loading="lazy" decoding="async" src="./src/images/illustration-laptop-mobile.svg" lazy="imagen" class="2xl:ml-[-270px] mx-auto">
+      </picture>
+    </div>
+
+    <div class="caracteristicas__contenido text-center md:text-left w-[90%] mx-auto 2xl:mx-0 2xl:w-[70%] justify-self-start">
+      <h2 class="text-xl text-very-dark-blue font-medium mt-7">Free, open, simple</h2>
+      <p class="caracteristicas__texto text-very-dark-black-blue mt-3">
+        Blogr is a free and open source application backed by a large community of helpful developers. It supports 
+        features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, 
+        and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
+      </p>
+
+      <h2 class="text-xl text-very-dark-blue font-medium mt-7">Powerful tooling</h2>
+      <p class="caracteristicas__texto text-very-dark-black-blue mt-3">
+        Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
+        capable of producing even the most complicated sites.
+      </p>
+    </div>
+  </section>
+
+  <footer class="footer bg-very-dark-black-blue">
+    <div class="contenedor py-16 md:grid md:grid-cols-4">
+      <div class="footer__logo">
+        <img src="src/images/logo.svg" alt="logo-Blogr" class="mx-auto md:mx-0">
+      </div>
+
+      <div class="mt-10 md:mt-0">
+        <p class="text-center text-white mb-3 font-semibold md:text-left">Product</p>
+
+        <nav class="flex flex-col gap-1 items-center text-grayish-hsl md:items-start">
+          <a href="#" class="enlace relative">Overview</a>
+          <a href="#" class="enlace relative">Pricing</a>
+          <a href="#" class="enlace relative">Marketplace</a>
+          <a href="#" class="enlace relative">Features</a>
+          <a href="#" class="enlace relative">Integrations</a>
+        </nav>
+      </div>
+
+      <div class="mt-7 md:mt-0">
+        <p class="text-center text-white mb-3 font-semibold md:text-left">Company</p>
+
+        <nav class="flex flex-col gap-1 items-center text-grayish-hsl md:items-start">
+          <a href="#" class="enlace relative">About</a>
+          <a href="#" class="enlace relative">Team</a>
+          <a href="#" class="enlace relative">Blog</a>
+          <a href="#" class="enlace relative">Careers</a>
+        </nav>
+      </div>
+
+      <div class="mt-7 md:mt-0">
+        <p class="text-center text-white mb-3 font-semibold md:text-left">Connect</p>
+
+        <nav class="flex flex-col gap-1 items-center text-grayish-hsl md:items-start">
+          <a href="#" class="enlace relative">Contact</a>
+          <a href="#" class="enlace relative">Newsletter</a>
+          <a href="#" class="enlace relative">LinkedIn</a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="attribution contenedor text-center text-grayish-hsl pb-2">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" class="enlace relative text-white font-medium">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/jorgecb10" class="enlace relative text-white font-medium">Jorge Carranza</a>.
+    </div>
+  </footer>
+
+  <script src="src/js/app.js"></script>
+</body>
+</html>
